@@ -8,7 +8,7 @@ namespace BG.ItemSystem.Editor
     public partial class ISQualityDatabaseEditor : EditorWindow
     {
         ISQualityDatabase qualityDatabase;
-        ISQuality selectedItem;
+     //   ISQuality selectedItem;
         Texture2D selectedTexture;
         Vector2 _skrollPos;
         int selectedIndex = -1;
@@ -45,7 +45,7 @@ namespace BG.ItemSystem.Editor
                     AssetDatabase.SaveAssets();
                     AssetDatabase.Refresh();
             }
-            selectedItem = new ISQuality();
+       //     selectedItem = new ISQuality();
         }
 
         void OnGUI()
@@ -67,45 +67,45 @@ namespace BG.ItemSystem.Editor
 
         }
 
-        void AddQuailtyToDatabase()
-        {
-            selectedItem.Name = EditorGUILayout.TextField("Name:", selectedItem.Name);
-            if (selectedItem.Icon)
-            {
-                selectedTexture = selectedItem.Icon.texture;
-            }
-            else
-            {
-                selectedTexture = null;
-            }
+        //void AddQuailtyToDatabase()
+        //{
+        //    selectedItem.Name = EditorGUILayout.TextField("Name:", selectedItem.Name);
+        //    if (selectedItem.Icon)
+        //    {
+        //        selectedTexture = selectedItem.Icon.texture;
+        //    }
+        //    else
+        //    {
+        //        selectedTexture = null;
+        //    }
 
-            if(GUILayout.Button(selectedTexture, GUILayout.Width(SPRITE_BUTTON_SIZE),GUILayout.Height(SPRITE_BUTTON_SIZE)))
-            {
-                int controlorID = EditorGUIUtility.GetControlID(FocusType.Passive);
-                EditorGUIUtility.ShowObjectPicker<Sprite>(null, true, null, controlorID);
-            }
+        //    if(GUILayout.Button(selectedTexture, GUILayout.Width(SPRITE_BUTTON_SIZE),GUILayout.Height(SPRITE_BUTTON_SIZE)))
+        //    {
+        //        int controlorID = EditorGUIUtility.GetControlID(FocusType.Passive);
+        //        EditorGUIUtility.ShowObjectPicker<Sprite>(null, true, null, controlorID);
+        //    }
 
-            string commandName = Event.current.commandName;
-            if (commandName == "ObjectSelectorUpdated")
-            {
-                selectedItem.Icon = (Sprite)EditorGUIUtility.GetObjectPickerObject();
-                Repaint();
-            }
+        //    string commandName = Event.current.commandName;
+        //    if (commandName == "ObjectSelectorUpdated")
+        //    {
+        //        selectedItem.Icon = (Sprite)EditorGUIUtility.GetObjectPickerObject();
+        //        Repaint();
+        //    }
 
-           if( GUILayout.Button("Save"))
-           {
+        //   if( GUILayout.Button("Save"))
+        //   {
               
-               if (selectedItem == null)
-                   return;
-               if (selectedItem.Name == "")
-                   return;
+        //       if (selectedItem == null)
+        //           return;
+        //       if (selectedItem.Name == "")
+        //           return;
 
-               qualityDatabase.Add(selectedItem);
+        //       qualityDatabase.Add(selectedItem);
           
 
-               selectedItem = new ISQuality();
-           }
+        //       selectedItem = new ISQuality();
+        //   }
 
-        }
+        //}
     }
 }

@@ -11,3 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4762a6710ff0dd429c0730e9dc36156, type: 3}
   m_Name: bgQualityDatabase
   m_EditorClassIdentifier: 
+  database:
+  - _name: 4154
+    _icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - _name: 455
+    _icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
