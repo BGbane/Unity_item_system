@@ -4,14 +4,18 @@ using UnityEditor;
 
 
 namespace BG.ItemSystem.Editor
-{ 
-    public partial class ISQualityDatabaseEditor : EditorWindow
+{
+    public partial class ISItemDatabaseEditor : EditorWindow
     {
         ISQualityDatabase qualityDatabase;
      //   ISQuality selectedItem;
         Texture2D selectedTexture;
+        Texture2D selectedTextureMI;
+        Texture2D selectedTextureCI;
         Vector2 _skrollPos;
         int selectedIndex = -1;
+        int selectedIndexMI = -1;
+        int selectedIndexCI = -1;
 
         const int SPRITE_BUTTON_SIZE = 75;
 
@@ -19,11 +23,11 @@ namespace BG.ItemSystem.Editor
         const string DATABASE_FOLDER_NAME = @"Database";
         const string DATABASE_FULL_PATH = @"Assets/" + DATABASE_FOLDER_NAME + "/" + DATABASE_FILE_NAME;
 
-        [MenuItem("ItemSystem/Database/Quality Editor %#i")]
+        [MenuItem("ItemSystem/Database/Item Editor %#i")]
         public static void Init()
         {
 
-            ISQualityDatabaseEditor window = EditorWindow.GetWindow<ISQualityDatabaseEditor>("Quality Database");
+            ISItemDatabaseEditor window = EditorWindow.GetWindow<ISItemDatabaseEditor>("Quality Database");
             window.minSize = new Vector2(400, 300);
            // window.titleContent = "Quality Database";
             window.Show();
@@ -62,7 +66,7 @@ namespace BG.ItemSystem.Editor
             GUILayout.Label("Items:"+qualityDatabase.Count);
             if(GUILayout.Button("Add"))
             {
-                qualityDatabase.Add(new ISQuality());
+                qualityDatabase.Add(new ISItem());
             }
 
         }

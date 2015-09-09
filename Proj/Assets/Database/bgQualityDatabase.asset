@@ -12,7 +12,33 @@ MonoBehaviour:
   m_Name: bgQualityDatabase
   m_EditorClassIdentifier: 
   database:
-  - _name: 4154
-    _icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  - _name: 455
-    _icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - _normal: 0
+    _stack: 0
+    _partial: 1
+    _name: Bane
+    _icon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    _ininventory: 0
+    _isdeleted: 0
+    _multiname: Multy name
+    _completename: Complete Name
+    _multiIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    _completeIcon: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    _numberofstack: 0
+    _curentnumberofstack: 0
+    _multinumber: 0
+    _curentmultinumber: 0
+  - _normal: 0
+    _stack: 0
+    _partial: 0
+    _name: 
+    _icon: {fileID: 0}
+    _ininventory: 0
+    _isdeleted: 0
+    _multiname: 
+    _completename: 
+    _multiIcon: {fileID: 0}
+    _completeIcon: {fileID: 0}
+    _numberofstack: 0
+    _curentnumberofstack: 0
+    _multinumber: 0
+    _curentmultinumber: 0

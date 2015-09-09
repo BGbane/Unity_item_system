@@ -10,23 +10,23 @@ namespace BG.ItemSystem
 public class ISQualityDatabase : ScriptableObject
     {
     [SerializeField]
-     List<ISQuality> database = new List<ISQuality>();
+    List<ISItem> database = new List<ISItem>();
 
 
 
-    public void Add(ISQuality item)
+    public void Add(ISItem item)
      {
          database.Add(item);
          EditorUtility.SetDirty(this);
      }
 
-    public void Insert(int index, ISQuality item)
+    public void Insert(int index, ISItem item)
     {
         database.Insert(index, item);
         EditorUtility.SetDirty(this);
     }
 
-    public void Remove(ISQuality item)
+    public void Remove(ISItem item)
     {
         database.Remove(item);
         EditorUtility.SetDirty(this);
@@ -45,13 +45,13 @@ public class ISQualityDatabase : ScriptableObject
     }
 
 
-    public ISQuality Get(int index)
+    public ISItem Get(int index)
     {
       return database.ElementAt(index);
     }
 
 
-    public void Replace(int index, ISQuality item)
+    public void Replace(int index, ISItem item)
     {
         database[index] = item;
         EditorUtility.SetDirty(this);
